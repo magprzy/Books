@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	xmlns:th="http://www.thymeleaf.org"
+	layout:decorate="~{fragments/layout}">
+<head>
+<title>Books</title>
+</head>
+<body>
+	<div layout:fragment="content" th:remove="tag">
+		<section>
+			<div class="jumbotron">
+				<div class="container">
+
+					<p>The book of selected parameters doesn't exist.</p>
+					<p>Try again with another parameters.</p>
+					
+					 <p>
+                            <a th:href="@{/books/search}" class="btn btn-default">  TRY AGAIN
+                            </a>
+                        </p>
+                        
+				</div>
+			</div>
+
+
+		</section>
+
+	</div>
+</body>
+</html>

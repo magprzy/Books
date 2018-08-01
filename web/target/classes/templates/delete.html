@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	xmlns:th="http://www.thymeleaf.org"
+	layout:decorate="~{fragments/layout}">
+<head>
+<title>Congratulations</title>
+</head>
+<body>
+	<div layout:fragment="content" th:remove="tag">
+		<section>
+			<div class="jumbotron">
+				<div class="container">
+					<h1>Congratulations</h1>
+					<p>You just deleted the book!</p>
+				</div>
+				<p>
+					<a th:href="@{/books}" class="btn btn-default"> <span
+						class="glyphicon-info-sign glyphicon" /></span> Show all books
+					</a>
+				</p>
+			</div>
+		</section>
+
+	</div>
+</body>
+</html>
