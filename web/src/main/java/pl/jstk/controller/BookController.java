@@ -6,8 +6,6 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import pl.jstk.service.impl.BookServiceImpl;
@@ -29,7 +27,7 @@ public class BookController {
 	}
 
 	@GetMapping(value = "/books/book")
-	public String getDetail(@RequestParam("id") String id, Model model) {
+	public String getDetail(@RequestParam("id") Long id, Model model) {
 
 		model.addAttribute("book", bookService.findBookById(id));
 

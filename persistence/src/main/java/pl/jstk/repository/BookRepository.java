@@ -18,7 +18,7 @@ public interface BookRepository extends JpaRepository<BookEntity, Long> {
     List<BookEntity> findBookByAuthor(@Param("author") String author);
     
     @Query("select book from BookEntity book where upper(book.id) like concat('%', upper(:id), '%')")
-    BookEntity findBookById(@Param("id") String id);
+    BookEntity findBookById(@Param("id") long l);
     
     
 }

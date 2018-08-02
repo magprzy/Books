@@ -55,8 +55,8 @@ public class BookServiceImpl implements BookService {
         return BookMapper.map2To(bookRepository.findBookByAuthor(author));
     }
     
-    public BookTo findBookById(String id){
-    	return BookMapper.map(bookRepository.findBookById(id));
+    public BookTo findBookById(long l){
+    	return BookMapper.map(bookRepository.findBookById(l));
     }
 
     @Override
